@@ -1,64 +1,57 @@
 body {
-    background-color:black;
     margin: 0;
     padding: 0;
+    background-image: url(https://i.pinimg.com/originals/de/0f/4b/de0f4bf6e8075312a6eb20ad7044571a.jpg);
 }
+
 #wrapper {
-    width: 1200px;
+    width: 1100px;
     margin: auto;
-    background-color:lightgray;
+    background: #ccc;
     padding: 10px;
+}
+
+.header {
+    background-color: crimson;
+    color: #fff;
+    padding: 15px;
+    font-size: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+#main {
     overflow: hidden;
 }
 
-#header {
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 40px;
-    background-color: red;
-    color: white;
-    position: relative;
-} 
-
-#main {
-    margin-top: 8px;
+.forma {
+    width: 500px;
     float: left;
 }
 
-.mainForm {
-    width: 300px;
-    height: 30px;
-    margin: 2px;
-    font-size: 17px;
+.forma input, .forma select {
+    display: block;
+    width: 85%;
+    margin: 10px;
+    font-size: 22px;
+    padding: 5px 10px;
 }
 
-h4 {
-    margin: 0;
-    padding: 0;
-}
-
-.bottomButtons {
-    width: 70px;
-    height: 30px;
-    font-size: 18px;
-    margin-top: 30px;
-    margin-left: 52px;
-    margin-bottom: 10px;
-    border-radius: 8%;
-}
-
-#save {
-    background-color: green;
-}
-#clear {
-    background-color: cyan;
+.results {
+    float: left;
+    width: 500px;
 }
 
 .result-item {
-    height: 300px;
-    width: 400px;
-    background-color: white;
-    float: right;
-    border: 1px solid black;
-    margin: 10px;
+    float: left;
+    width: 40%;
+    padding: 15px;
+    margin: 7px;
+    background: #bbb;
+    background: #fff;
+    border: 1px solid blueviolet;
+}
+
+.result-item h4, .result-item h3 {
+    margin: 0;
 }

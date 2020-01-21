@@ -11,42 +11,36 @@
 
 <body>
     <div id="wrapper">
-        <div id="header">
-            <h4>Autosalon LINK</h4>
-        </div>
+        <h1 class="header">Autosalon LINK</h1>
+
         <div id="main">
-            <input class="mainForm" type="text" id='manufacturer' name="manufacturer" placeholder="Manufacturer">
-            <br>
-            <input class="mainForm" type="text" id='model' name="model" placeholder="Model">
-            <br>
-            <input class="mainForm" type="text" id='price' name="price" placeholder="Price">
-            <br>
-            <input class="mainForm" type="text" id='year' name="year" placeholder="Year">
-            <br>
-
-            <select class="mainForm" id="fuel">
-                <option value="" disabled selected>Select fuel</option>
-                <option>Diesssel</option>
-                <option>Petrol</option>
-                <option>Gas</option>
-                <option>Electric</option>
-            </select>
-            <br>
-
-            <input class="mainForm" type="text" id='condition' name="condition" placeholder="Condition">
-            <br>
-            <input class="mainForm" type="text" id='picture' name="picture" placeholder="Enter picture URL">
-            <br>
-
-            <button class="bottomButtons" id="save" onclick=saveCar()>Save</button>
-            <button class="bottomButtons" id="clear" onclick="clearForm()">Clear</button>
-
+            <div class="forma">
+                <input id="marka" type="text" placeholder="Marka">
+                <input id="model" type="text" placeholder="Model">
+                <input id="cijena" type="text" placeholder="Cijena">
+                <input id="godiste" type="text" placeholder="Godiste">
+                <select id="gorivo">
+                    <option></option>
+                    <option value="Dizel">Dizel</option>
+                    <option value="Benzin">Benzin</option>
+                    <option value="Plin">Plin</option>
+                </select>
+                <input id="stanje" type="text" placeholder="Stanje">
+                <button class="save" onclick="saveCar()">Save</button>
+                <button class="clear" onclick="clearForm()">Clear</button>
+            </div>
+            <div class="results" id="res" > 
+                <div class="result-item">
+                    <h3>Audi Q3</h3>
+                    <img width="150"
+                        src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/640x400/quality/80/https://s.aolcdn.com/commerce/autodata/images/CAC90AUS051C021001.jpg"
+                        alt="">
+                    <h4>Presao 240.000 km</h4>
+                </div>
+            </div>
         </div>
-        <div class="result-item"></div>
 
-    </div>
-
-    <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>
