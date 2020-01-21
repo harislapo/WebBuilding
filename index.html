@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Web building</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1 class="header">Autosalon LINK</h1>
+
+        <div id="main">
+            <div class="forma">
+                <input id="marka" type="text" placeholder="Marka">
+                <input id="model" type="text" placeholder="Model">
+                <input id="cijena" type="text" placeholder="Cijena">
+                <input id="godiste" type="text" placeholder="Godiste">
+                <select id="gorivo">
+                    <option></option>
+                    <option value="Dizel">Dizel</option>
+                    <option value="Benzin">Benzin</option>
+                    <option value="Plin">Plin</option>
+                </select>
+                <input id="stanje" type="text" placeholder="Stanje">
+                <button class="save" onclick="saveCar()">Save</button>
+                <button class="clear" onclick="clearForm()">Clear</button>
+            </div>
+            <div class="results" id="res" > 
+                <div class="result-item">
+                    <h3>Audi Q3</h3>
+                    <img width="150"
+                        src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/640x400/quality/80/https://s.aolcdn.com/commerce/autodata/images/CAC90AUS051C021001.jpg"
+                        alt="">
+                    <h4>Presao 240.000 km</h4>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+</body>
+
+</html>
