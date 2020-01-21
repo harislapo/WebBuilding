@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Web building</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h4>Autosalon LINK</h4>
+        </div>
+        <div id="main">
+            <input class="mainForm" type="text" id='manufacturer' name="manufacturer" placeholder="Manufacturer">
+            <br>
+            <input class="mainForm" type="text" id='model' name="model" placeholder="Model">
+            <br>
+            <input class="mainForm" type="text" id='price' name="price" placeholder="Price">
+            <br>
+            <input class="mainForm" type="text" id='year' name="year" placeholder="Year">
+            <br>
+
+            <select class="mainForm" id="fuel">
+                <option value="" disabled selected>Select fuel</option>
+                <option>Dieel</option>
+                <option>Petrol</option>
+                <option>Gas</option>
+                <option>Electric</option>
+            </select>
+            <br>
+
+            <input class="mainForm" type="text" id='condition' name="condition" placeholder="Condition">
+            <br>
+            <input class="mainForm" type="text" id='picture' name="picture" placeholder="Enter picture URL">
+            <br>
+
+            <button class="bottomButtons" id="save" onclick=saveCar()>Save</button>
+            <button class="bottomButtons" id="clear" onclick="clearForm()">Clear</button>
+
+        </div>
+        <div class="result-item"></div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
