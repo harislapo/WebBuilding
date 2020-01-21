@@ -1,4 +1,62 @@
-body {
+
+/* drugi zadatak */
+/* body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 1100px;
+    margin: 20px auto;
+    background: lightgrey;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: lightblue;
+    color: black;
+    padding: 15px;
+    font-size: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+#todo {
+    width: 500px;
+}
+
+#main input {
+    width: 90%;
+    height: 130px;
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    margin: 25px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+.add-btn {
+    background: green;
+    color: white;
+    font-size: 20px;
+}
+
+.del-btn {
+    background: red;
+    color: white;
+    font-size: 20px;
+}
+
+ */
+
+
+ 
+/* prvi zadatak */
+/* body {
     margin: 0;
     padding: 0;
     background-image: url(https://i.pinimg.com/originals/de/0f/4b/de0f4bf6e8075312a6eb20ad7044571a.jpg);
@@ -55,3 +113,4 @@ body {
 .result-item h4, .result-item h3 {
     margin: 0;
 }
+ */
