@@ -17,6 +17,16 @@ select {
     font-size: 20px;
 }
 
+
+.special {
+    background: red;
+    color: white;
+}
+
+.not-special {
+    background: blue;
+    color: white;
+}
 /* drugi zadatak */
 /* body {
     margin: 0;

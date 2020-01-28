@@ -3,70 +3,123 @@
 var app = angular.module('myApp', [])
 
     .controller('mainCtrl', function ($scope) {
-        /*  
-        $scope.user = {
-             name: 'Haris',
-             lastName: 'Lapo',
-             adress: 'GRB 82.',
-             image: 'https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg'
-         }; */
 
-         $scope.users = [
-             {id:1, name:'Amir' },
-             {id:2, name:'Damir' },
-             {id:3, name:'Samir' },
-         ]
-
-        $scope.blogs = [
+        $scope.langs = [
             {
-                name: 'Prvi AngularJS blog',
-                text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
-                beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
-                `,
-                comments: ['Ovaj blog je pravo dobar.', 'Meni se ne svidja!']
+                naziv: 'C#',
+                price: 100,
+                datum: new Date(),
+                like:0,
+                dislike:0
             },
             {
-                name: 'Drugi AngularJS blog',
-                text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
-                beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
-                `
+                naziv: 'PHP',
+                price: 300,
+                datum: new Date(),
+                like:0,
+                dislike:0
             },
             {
-                name: 'Treci AngularJS blog',
-                text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
-                beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
-                `
+                naziv: 'Java',
+                price: 400,
+                datum: new Date(),
+                like:0,
+                dislike:0
+            },
+            {
+                naziv: 'AngularJS',
+                price: 5000,
+                datum: new Date(),
+                like:0,
+                dislike:0
             }
         ];
 
-        $scope.deleteBlog = function(index){
-            console.log('Delete', index);
-            $scope.blogs.splice(index, 1);
+        $scope.likeLang = function (lang) {
+            console.log(lang);
+            lang.like++;
         };
 
-        $scope.updateBlog = function(blog){
-            console.log('Update', blog);
-            
+        $scope.dislikeLang = function (lang) {
+            console.log(lang);
+            lang.dislike++;
         };
 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*          
+                    $scope.blogs = [
+                    {
+                        naziv: 'Prvi AngularJS blog',
+                        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
+                        beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
+                        `,
+                        comments: ['Ovaj blog je pravo dobar.', 'Meni se ne svidja!']
+                    },
+                    {
+                        naziv: 'Drugi AngularJS blog',
+                        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
+                        beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
+                        `
+                    },
+                    {
+                        naziv: 'Treci AngularJS blog',
+                        text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
+                        beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
+                        `
+                    }
+                ];                  
+                
+                    $scope.users = 
+                    [
+                        {id:1, naziv:'Amir' },
+                        {id:2, naziv:'Damir' },
+                        {id:3, naziv:'Samir' },
+                    ];
+
+                $scope.user = {
+                    naziv: 'Haris',
+                    lastnaziv: 'Lapo',
+                    adress: 'GRB 82.',
+                    image: 'https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg'
+                }; */
+        /* 
+
+         */
+
+        /*         
+        
+
+        */
+        /* 
+                $scope.deleteBlog = function (index) {
+                    console.log('Delete', index);
+                    $scope.blogs.splice(index, 1);
+                };
+        
+                $scope.updateBlog = function (blog) {
+                    console.log('Update', blog);
+        
+                };
+         */
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* drugi zadatak */
@@ -74,12 +127,12 @@ var app = angular.module('myApp', [])
 
 function addTodo() {
     var todo = {
-        name: document.getElementById('todo').value,
+        naziv: document.getElementById('todo').value,
         show: function (i) {
             return `
             <div>
             <input type="checkbox" id="check">
-            <span>${todo.name}</span>
+            <span>${todo.naziv}</span>
             <button onclick="deleteTodo(${i})">Delete</button>
             </div>
             `

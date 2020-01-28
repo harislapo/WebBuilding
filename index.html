@@ -11,12 +11,45 @@
 </head>
 
 <body>
-    <!-- treci zadatak -->
     <!-- ANGULARJS -->
 
-    <!--     <h1>AngularJS</h1> -->
+    <h1>AngularJS</h1>
 
     <div ng-controller='mainCtrl'>
+
+        <input type="number" ng-model="numberOfPages" placeholder="Limit rezultove">
+        <br>
+        <input type="text" ng-model="query" placeholder="Pretrazi po nazivu">
+        <hr>
+        <table border="2">
+            <tr>
+                <th>Index</th>
+                <th>Ime</th>
+                <th>Cijena</th>
+                <th>Datum</th>
+                <th>Likes</th>
+                <th>Dislikes</th>
+                <th>Like/Dislike</th>
+            </tr>
+            <tr ng-repeat="lang in langs | filter:query">
+                <td>{{$index}}</td>
+                <td>{{lang.naziv | uppercase}}</td>
+                <td ng-class="{special:lang.price > 350, 'not-special': lang.price < 340}">{{lang.price | currency:'BAM':1}}</td>
+                <td>{{lang.datum | date: 'MMMM, dd., yyyy'}}</td>
+                <td>{{lang.like}}</td>
+                <td>{{lang.dislike}}</td>
+                <td>
+                    <button ng-click="likeLang(lang)">Like</button>
+                    <button ng-disabled= "lang.dislike >= 2" ng-click="dislikeLang(lang)">Dislike</button>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
         <!-- 
         <select>
             <option>Select user</option>
@@ -35,7 +68,8 @@
  
         -->
 
-        <table border="2">
+        <!-- 
+            <table border="2">
             <tr>
                 <th>ID#</th>
                 <th>Naziv bloga</th>
@@ -53,8 +87,9 @@
                 </td>
                 
             </tr>
-        </table>
-    <!-- 
+            </table> 
+        -->
+        <!-- 
     <div ng-controller='mainCtrl'>
 
                 
@@ -75,8 +110,8 @@
 
 
 
-    <!-- drugi zadatak -->
-    <!-- 
+        <!-- drugi zadatak -->
+        <!-- 
     <div id="wrapper">
         <h1 class="header">TO-DO list</h1>
 
@@ -95,8 +130,8 @@
     -->
 
 
-    <!-- prvi zadatak -->
-    <!--     <div id="wrapper">
+        <!-- prvi zadatak -->
+        <!--     <div id="wrapper">
         <h1 class="header">Autosalon LINK</h1>
 
         <div id="main">
@@ -126,7 +161,7 @@
             </div>
         </div>
  -->
-    <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>
