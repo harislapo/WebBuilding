@@ -6,11 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <title>Web building</title>
 </head>
 
-<body>
+<body ng-app='myApp'>
+    <!-- treci zadatak -->
+    <!-- ANGULARJS -->
+
+    <h1>AngularJS</h1>
+
+    <div ng-controller='kontroler'>
+
+    <img width="150" src="{{user.slika}}" alt="Slika usera">
+    <hr>
+    <input type="text" ng-model='user.name'>
+    <span> {{user.name}}</span>
+    <h3> {{user.lastName}}</h3>
+    <h3> {{user.adresa}}</h3>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- drugi zadatak -->
+    <!-- 
     <div id="wrapper">
+        <h1 class="header">TO-DO list</h1>
+
+        <div id="main">
+            <input id="todo" type="text" placeholder="Type your note here...">
+
+        </div>
+        <div id="buttons">
+            <button class="add-btn" onclick="addTodo()" onkeyup="addOnEnter(event)">Add</button>
+            <button class="del-btn" onclick="deleteAll()">Delete all</button>
+        </div>
+        <div id="todos">
+
+        </div>
+    </div> 
+    -->
+
+
+    <!-- prvi zadatak -->
+    <!--     <div id="wrapper">
         <h1 class="header">Autosalon LINK</h1>
 
         <div id="main">
@@ -39,8 +86,8 @@
                 </div>
             </div>
         </div>
-
-        <script src="js/script.js"></script>
+ -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
