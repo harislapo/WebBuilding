@@ -1,11 +1,14 @@
 
 var app = angular.module('myApp', [])
-    .controller('kontroler', function($scope){
-        $scope.user = { 
-            name: 'Mika', 
-            lastName: 'Mikic', 
+    .controller('kontroler', function ($scope) {
+        $scope.user = {
+            name: 'Mika',
+            lastName: 'Mikic',
             adresa: 'Bosanska bb',
-            slika: 'https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg'};
+            slika: 'https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg'
+        };
+
+
     });
 
 
@@ -63,10 +66,6 @@ function deleteTodo(index) {
     todos.splice(index, 1);
     showAll();
 }
-
-
-
-
 
 
 
