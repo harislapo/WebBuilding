@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='myApp'>
 
 <head>
     <meta charset="UTF-8">
@@ -10,23 +10,62 @@
     <title>Web building</title>
 </head>
 
-<body ng-app='myApp'>
+<body>
     <!-- treci zadatak -->
     <!-- ANGULARJS -->
 
-    <h1>AngularJS</h1>
+    <!--     <h1>AngularJS</h1> -->
 
-    <div ng-controller='kontroler'>
+    <div ng-controller='mainCtrl'>
+        <!-- 
+        <select>
+            <option>Select user</option>
+            <option ng-repeat="u in users">{{u.name}}</option>
+        </select> 
+        -->
 
-        <img width="150" ng-src="{{user.slika}}" alt="Slika usera">
+        <!-- 
+        <div class="blog" ng-repeat="item in blogs">
+            <h1>{{$index}}. {{item.name}}</h1>
+            <p>{{item.text}}</p>
+            <span ng-repeat="comment in item.comments">
+                {{comment}}</span>
+        </div>    
+
+ 
+        -->
+
+        <table border="2">
+            <tr>
+                <th>ID#</th>
+                <th>Naziv bloga</th>
+                <th>Text</th>
+                <th>Akcije</th>
+            </tr>
+            <tr ng-repeat="item in blogs">
+                <td>{{$index}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.text}}</td>
+
+                <td>
+                    <button ng-click="updateBlog($index)">UPDATE</button>
+                    <button ng-click="deleteBlog($index)">DELETE</button>
+                </td>
+                
+            </tr>
+        </table>
+    <!-- 
+    <div ng-controller='mainCtrl'>
+
+                
+        <img width="150" ng-src="{{user.image}}" alt="Slika usera">
         <hr>
-        <input type="text" ng-model='user.name'>
-        <span> {{user.name}}</span>
-        <h3> {{user.lastName}}</h3>
-        <h3> {{user.adresa}}</h3>
+        <h3> {{user.name}} {{user.lastName}}</h3>
+        <h4> {{user.adress}}</h4> 
+       
 
-    </div>
-
+    </div>    
+ -->
 
 
 

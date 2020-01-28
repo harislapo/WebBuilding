@@ -1,15 +1,64 @@
 
+
 var app = angular.module('myApp', [])
-    .controller('kontroler', function ($scope) {
+
+    .controller('mainCtrl', function ($scope) {
+        /*  
         $scope.user = {
-            name: 'Mika',
-            lastName: 'Mikic',
-            adresa: 'Bosanska bb',
-            slika: 'https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg'
+             name: 'Haris',
+             lastName: 'Lapo',
+             adress: 'GRB 82.',
+             image: 'https://cdn.vox-cdn.com/thumbor/0n6dqQfk9MuOBSiM39Pog2Bw39Y=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19341372/microsoftedgenewlogo.jpg'
+         }; */
+
+         $scope.users = [
+             {id:1, name:'Amir' },
+             {id:2, name:'Damir' },
+             {id:3, name:'Samir' },
+         ]
+
+        $scope.blogs = [
+            {
+                name: 'Prvi AngularJS blog',
+                text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
+                beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
+                `,
+                comments: ['Ovaj blog je pravo dobar.', 'Meni se ne svidja!']
+            },
+            {
+                name: 'Drugi AngularJS blog',
+                text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
+                beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
+                `
+            },
+            {
+                name: 'Treci AngularJS blog',
+                text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Possimus ipsa veritatis veniam facere aut delectus, repudiandae exercitationem odio 
+                beatae dolorum quibusdam modi corrupti velit doloribus. Qui architecto illo quisquam sapiente?
+                `
+            }
+        ];
+
+        $scope.deleteBlog = function(index){
+            console.log('Delete', index);
+            $scope.blogs.splice(index, 1);
         };
 
+        $scope.updateBlog = function(blog){
+            console.log('Update', blog);
+            
+        };
 
     });
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,21 @@
+/* angular */
+
+.blog {
+    background: grey;
+    padding: 10px;
+    margin: 8px auto;
+    color: black;
+    border: 1px solid black;
+}
+
+.blog h1 {
+    color: purple;
+    margin: 2px;
+}
+
+select {
+    font-size: 20px;
+}
 
 /* drugi zadatak */
 /* body {
