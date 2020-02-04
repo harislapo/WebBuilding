@@ -1,5 +1,39 @@
 /* angular */
 
+i {
+    color: white;
+    margin-left: 10px;
+    padding-right: 5px;
+}
+
+/* Tour of Heroes */
+
+/* 
+.output {
+    height: 30px;
+    width: 320px;
+    margin-top: 40px;
+    background: lightgrey;
+    text-align: justify;
+    font-size: 24px;
+}
+
+#btn1 {
+    margin-left: 20px;
+    font-size: 20px;
+    background: lightblue;
+}
+
+input {
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+ */
+
+/* 
 .blog {
     background: grey;
     padding: 10px;
@@ -27,7 +61,10 @@ select {
     background: blue;
     color: white;
 }
+ */
+
 /* drugi zadatak */
+
 /* body {
     margin: 0;
     padding: 0;
@@ -81,9 +118,8 @@ select {
 
  */
 
-
- 
 /* prvi zadatak */
+
 /* body {
     margin: 0;
     padding: 0;

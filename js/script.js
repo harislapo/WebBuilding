@@ -1,52 +1,114 @@
-
-
 var app = angular.module('myApp', [])
 
     .controller('mainCtrl', function ($scope) {
 
-        $scope.langs = [
-            {
-                naziv: 'C#',
-                price: 100,
-                datum: new Date(),
-                like:0,
-                dislike:0
-            },
-            {
-                naziv: 'PHP',
-                price: 300,
-                datum: new Date(),
-                like:0,
-                dislike:0
-            },
-            {
-                naziv: 'Java',
-                price: 400,
-                datum: new Date(),
-                like:0,
-                dislike:0
-            },
-            {
-                naziv: 'AngularJS',
-                price: 5000,
-                datum: new Date(),
-                like:0,
-                dislike:0
-            }
-        ];
-
-        $scope.likeLang = function (lang) {
-            console.log(lang);
-            lang.like++;
+        $scope.folder = {
+            naziv: 'angular-tour-of-heroes',
+            isCollapsed: false,
+            children: [
+                { naziv: 'e2e' },
+                { naziv: 'node_modules' },
+                {
+                    naziv: 'src',
+                    children: [
+                        {
+                            naziv: 'app',
+                            children: [
+                                {
+                                    naziv: 'heroes',
+                                    children: [
+                                        { naziv: 'heroes.component.css' },
+                                        { naziv: 'heroes.component.html' },
+                                        { naziv: 'heroes.component.spec.ts' },
+                                        { naziv: 'heroes.component.ts' },
+                                    ]
+                                },
+                                { naziv: 'app.component.css' },
+                                { naziv: 'app.component.html' },
+                                { naziv: 'app.component.spec.ts' },
+                                { naziv: 'app.component.ts' },
+                                { naziv: 'app.module.ts' },
+                            ]
+                        }
+                    ]
+                }
+            ]
         };
 
-        $scope.dislikeLang = function (lang) {
-            console.log(lang);
-            lang.dislike++;
-        };
+        $scope.collapse = function (folder) {
+            console.log("collapsed", folder);
+            folder.isCollapsed = !folder.isCollapsed;
+        }
+    
 
-        
 
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Tour of Heroes */
+        /* 
+        $scope.heroes = ["Magneta", "Whatever", "C-man"];
+
+
+        $scope.addHero = function () {
+            $scope.heroes.push($scope.newHero)
+            console.log('Hero added');
+        }; */
+
+
+
+        /*        $scope.langs = [
+                   {
+                       naziv: 'C#',
+                       price: 100,
+                       datum: new Date(),
+                       like:0,
+                       dislike:0
+                   },
+                   {
+                       naziv: 'PHP',
+                       price: 300,
+                       datum: new Date(),
+                       like:0,
+                       dislike:0
+                   },
+                   {
+                       naziv: 'Java',
+                       price: 400,
+                       datum: new Date(),
+                       like:0,
+                       dislike:0
+                   },
+                   {
+                       naziv: 'AngularJS',
+                       price: 5000,
+                       datum: new Date(),
+                       like:0,
+                       dislike:0
+                   }
+               ];
+
+               $scope.likeLang = function (lang) {
+                   console.log(lang);
+                   lang.like++;
+               };
+
+               $scope.dislikeLang = function (lang) {
+                   console.log(lang);
+                   lang.dislike++;
+               };
+
+               
+        */
 
 
 
@@ -87,12 +149,12 @@ var app = angular.module('myApp', [])
                     }
                 ];                  
                 
-                    $scope.users = 
-                    [
-                        {id:1, naziv:'Amir' },
-                        {id:2, naziv:'Damir' },
-                        {id:3, naziv:'Samir' },
-                    ];
+                $scope.users = 
+                [
+                    {id:1, naziv:'Amir' },
+                    {id:2, naziv:'Damir' },
+                    {id:3, naziv:'Samir' },
+                ];
 
                 $scope.user = {
                     naziv: 'Haris',

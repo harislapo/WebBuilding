@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <title>Web building</title>
 </head>
 
@@ -14,10 +15,84 @@
     <!-- ANGULARJS -->
 
     <h1>AngularJS</h1>
-
     <div ng-controller='mainCtrl'>
+        <div style="background: black; color: green; height: 600px;width: 350px; padding-top: 10px;">
+            <i class="icon ion-md-{{folder.isCollapsed?'cellular':'play'}}"></i>
+            
+            <span style="cursor:pointer" ng-click="collapse(folder)">{{folder.naziv}}</span>
+            <div ng-if="folder.isCollapsed" ng-repeat="item in folder.children" style="padding-left: 15px;">
+                <i class="icon ion-md-play"></i>
+                {{item.naziv}}
 
-        <input type="number" ng-model="numberOfPages" placeholder="Limit rezultove">
+                <div ng-repeat="item in item.children" style="padding-left: 15px;">
+                    <i class="icon ion-md-play"></i>
+                    {{item.naziv}}
+
+                    <div ng-repeat="item in item.children" style="padding-left: 25px;">
+                        <i class="icon ion-md-play" ng-if="item.children"></i>
+                        <i style="color: purple;" class="icon ion-md-barcode" ng-if="item.naziv.endsWith('.css')"></i>
+                        <i style="color: yellow;" class="icon ion-md-code" ng-if="item.naziv.endsWith('.html')"></i>
+                        <i style="color: cyan;" class="icon ion-md-list" ng-if="item.naziv.endsWith('.ts')"></i>
+                        {{item.naziv}}
+
+                        <div ng-repeat="item in item.children " style="padding-left: 25px;">
+                            <i style="color: purple;" class="icon ion-md-barcode" ng-if="item.naziv.endsWith('.css')"></i>
+                            <i style="color: yellow;" class="icon ion-md-code" ng-if="item.naziv.endsWith('.html')"></i>
+                            <i style="color: cyan;" class="icon ion-md-list" ng-if="item.naziv.endsWith('.ts')"></i>
+                            {{item.naziv}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Tour of Heroes -->
+        <!-- 
+        <input ng-model="newHero" type="text" placeholder="Add hero">
+        <button ng-click="addHero()" id="btn1">Add</button>
+        <div ng-repeat= "x in heroes | filter:newHero" class="output">
+            {{x}} 
+        </div>
+        -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--  <input type="number" ng-model="numberOfPages" placeholder="Limit rezultove">
         <br>
         <input type="text" ng-model="query" placeholder="Pretrazi po nazivu">
         <hr>
@@ -34,30 +109,28 @@
             <tr ng-repeat="lang in langs | filter:query">
                 <td>{{$index}}</td>
                 <td>{{lang.naziv | uppercase}}</td>
-                <td ng-class="{special:lang.price > 350, 'not-special': lang.price < 340}">{{lang.price | currency:'BAM':1}}</td>
+                <td ng-class="{special:lang.price > 350, 'not-special': lang.price < 340}">
+                    {{lang.price | currency:'BAM':1}}</td>
                 <td>{{lang.datum | date: 'MMMM, dd., yyyy'}}</td>
                 <td>{{lang.like}}</td>
                 <td>{{lang.dislike}}</td>
                 <td>
                     <button ng-click="likeLang(lang)">Like</button>
-                    <button ng-disabled= "lang.dislike >= 2" ng-click="dislikeLang(lang)">Dislike</button>
+                    <button ng-disabled="lang.dislike >= 2" ng-click="dislikeLang(lang)">Dislike</button>
                 </td>
             </tr>
-        </table>
+        </table> -->
 
 
 
-
-
-
-        <!-- 
+    <!-- 
         <select>
             <option>Select user</option>
             <option ng-repeat="u in users">{{u.name}}</option>
         </select> 
         -->
 
-        <!-- 
+    <!-- 
         <div class="blog" ng-repeat="item in blogs">
             <h1>{{$index}}. {{item.name}}</h1>
             <p>{{item.text}}</p>
@@ -68,7 +141,7 @@
  
         -->
 
-        <!-- 
+    <!-- 
             <table border="2">
             <tr>
                 <th>ID#</th>
@@ -89,7 +162,9 @@
             </tr>
             </table> 
         -->
-        <!-- 
+
+
+    <!-- 
     <div ng-controller='mainCtrl'>
 
                 
@@ -110,8 +185,8 @@
 
 
 
-        <!-- drugi zadatak -->
-        <!-- 
+    <!-- drugi zadatak -->
+    <!-- 
     <div id="wrapper">
         <h1 class="header">TO-DO list</h1>
 
@@ -130,8 +205,8 @@
     -->
 
 
-        <!-- prvi zadatak -->
-        <!--     <div id="wrapper">
+    <!-- prvi zadatak -->
+    <!--     <div id="wrapper">
         <h1 class="header">Autosalon LINK</h1>
 
         <div id="main">
@@ -161,7 +236,7 @@
             </div>
         </div>
  -->
-        <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
