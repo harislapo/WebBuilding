@@ -16,7 +16,41 @@
 
 
 
+/* Vue.js tutorial
 
+Vue.component('todo-item', {
+    template: '<li style="color:red;">{{todo.text}}</li>',
+    props: ['todo']
+});
+
+
+var vm = new Vue({
+    el: '#app',
+    data: {
+        msg:'Vue je najjakiji framework ikada',
+        titleMsg: 'Good for u!',
+        imgUrl: 'https://hackernoon.com/hn-images/1*ACR0gj0wbx91V_xgURifWg.png',
+        show: false,
+        todos: [
+            {text: 'JavaScript najbolji jezik'},
+            {text: 'Vue.js najbolji frejmvork'},
+            {text: 'HTML je tonbe'}
+        ],
+        firstName: 'Haris'
+    },
+    methods: {
+        showImage: function (evt) {
+            console.log(evt);
+            this.show = !this.show;
+        },
+        logData: function () {
+            console.log(this.firstName);
+            
+        }
+    }
+});
+
+ */
 
 
 
@@ -194,9 +228,9 @@ $scope.addHero = function () {
             console.log('Update', blog);
 
         };
- */
-});
 
+});
+ */
 
 /* drugi zadatak */
 /* var todos = [];

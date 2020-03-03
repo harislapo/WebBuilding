@@ -1,27 +1,72 @@
-/* angular */
+/* Vue.js */
+
+body {
+    background: url(https://www.elsetge.cat/myimg/f/211-2114311_cv-background-images-background-images-for-cv.jpg);
+    background-repeat: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+#welcome {
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+#templateWrapper {
+    background: linear-gradient(90deg, lightgrey, lightblue);
+    margin: 30px auto;
+    width: 500px;
+    padding: 10px;
+}
+
+#templateWrapper input {
+    font-size: 16px;
+    padding: 10px;
+    margin: 3px;
+    width: 92.5%;
+}
+
+#templateWrapper select {
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    width: 50%;
+}
+
+#templateWrapper textarea {
+    font-size: 16px;
+}
 
 
+#builderWrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+    border-top: 20px solid pink;
+    background-color: whitesmoke;
+}
 
+#wrapper {
+    padding: 20px;
+}
 
+.header {
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 20px solid lightgrey;
+}
 
+hr {
+    width: 40px;
+    color: pink;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sidebar {
+    
+}
 
 
 
@@ -40,7 +85,6 @@ i {
 }
  */
 
- 
 /* Tour of Heroes */
 
 /* 
