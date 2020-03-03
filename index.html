@@ -14,11 +14,13 @@
 <body>
     <!-- ANGULARJS -->
 
+    <!-- List of children -->
+<!-- 
     <h1>AngularJS</h1>
     <div ng-controller='mainCtrl'>
         <div style="background: black; color: green; height: 600px;width: 350px; padding-top: 10px;">
             <i class="icon ion-md-{{folder.isCollapsed?'cellular':'play'}}"></i>
-            
+
             <span style="cursor:pointer" ng-click="collapse(folder)">{{folder.naziv}}</span>
             <div ng-if="folder.isCollapsed" ng-repeat="item in folder.children" style="padding-left: 15px;">
                 <i class="icon ion-md-play"></i>
@@ -36,7 +38,8 @@
                         {{item.naziv}}
 
                         <div ng-repeat="item in item.children " style="padding-left: 25px;">
-                            <i style="color: purple;" class="icon ion-md-barcode" ng-if="item.naziv.endsWith('.css')"></i>
+                            <i style="color: purple;" class="icon ion-md-barcode"
+                                ng-if="item.naziv.endsWith('.css')"></i>
                             <i style="color: yellow;" class="icon ion-md-code" ng-if="item.naziv.endsWith('.html')"></i>
                             <i style="color: cyan;" class="icon ion-md-list" ng-if="item.naziv.endsWith('.ts')"></i>
                             {{item.naziv}}
@@ -48,7 +51,7 @@
 
         </div>
 
-
+ -->
 
 
 
